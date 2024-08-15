@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 function Contact() {
   const [copyStatus1, setCopyStatus1] = useState(false);
   const [copyStatus2, setCopyStatus2] = useState(false);
-  const [copyStatus3, setCopyStatus3] = useState(false);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -25,13 +24,8 @@ function Contact() {
       setTimeout(() => {
         setCopyStatus2(false);
       }, 300)
-    } else if (copyStatus3) {
-      copyToClipboard(document.getElementsByClassName('span')[2].innerHTML);
-      setTimeout(() => {
-        setCopyStatus3(false);
-      }, 300);
     }
-  }, [copyStatus1, copyStatus2, copyStatus3]);
+  }, [copyStatus1, copyStatus2]);
 
   return (
     <div id="contact" className="flex flex-col h-700px justify-center items-center text-center bg-slate-200 py-12">
@@ -57,7 +51,7 @@ function Contact() {
         <div className="flex bg-orange-300 gap-3 w-[100%] md:w-[75%] xl:w-[50%] rounded-lg justify-between items-center py-2 px-3">
           <FaInstagramSquare className="text-4xl" />
           <span className="span text-xl text-gray-700 py-2 px-3 rounded-lg bg-transparent">anandsyadav257</span>
-          {copyStatus3 ? (<TiTick className={`text-[30px] cursor-pointer`} />) : (<a href="https://www.instagram.com/anandsyadav257/" target="_blank" rel="noreferrer"><FaLink className='text-3xl hover:text-red-600' /></a>)}
+          <a href="https://www.instagram.com/anandsyadav257/" target="_blank" rel="noreferrer"><FaLink className='text-3xl hover:text-red-600' /></a>
         </div>
 
       </div>

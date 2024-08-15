@@ -13,16 +13,16 @@ function Home() {
       <div id="home" className='flex flex-col bg-blue-100 justify-center items-center w-full min-h-[500px] gap-10 px-10 text-center'>
         <div className='flex flex-col gap-5 justify-center items-center'>
           <p className='text-black font-bold text-5xl font-sans'>
-            <span>HEY, I'M </span> 
+            <span>HEY, I'M </span>
             <span className="text-red-900">
-              <Typewriter 
-                words = {['ANAND YADAV', 'a Web Developer', 'a Problem Solver', 'a Coding Enthusiast']}
+              <Typewriter
+                words={['ANAND YADAV', 'a Web Developer', 'a Problem Solver', 'a Coding Enthusiast']}
                 loop={true}
                 typeSpeed={120}
                 deleteSpeed={80}
                 cursor
                 cursorStyle='|'
-              />  
+              />
             </span>
           </p>
           <div className='flex flex-col gap-2 items-center'>

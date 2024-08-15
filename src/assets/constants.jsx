@@ -19,7 +19,7 @@ export const ProjectInfoArr = [
         techs: ['React', 'React Router', 'Redux Toolkit', 'React-Player', 'React-Loading-Skeleton'],
         image1: '/images/project-One-1.png',
         image2: '/images/project-One-2.png',
-        code:'https://github.com/ANANDSYADAV/YouTube-Clone',
+        code: 'https://github.com/ANANDSYADAV/YouTube-Clone',
         live: 'https://youtube-clone-kappa-gray.vercel.app/'
     },
     {

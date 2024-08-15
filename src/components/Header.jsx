@@ -63,7 +63,7 @@ function Header() {
         </div>
       </div>
 
-      {menuShow && <MobileMenuBar menuShow={menuShow} setMenuShow={setMenuShow}/>}
+      {menuShow && <MobileMenuBar menuShow={menuShow} setMenuShow={setMenuShow} />}
 
     </>
 
