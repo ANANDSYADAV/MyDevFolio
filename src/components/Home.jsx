@@ -23,10 +23,7 @@ function Home() {
                 cursor
                 cursorStyle='|'
               />  
-            </span> 
-            {/* <span className='text-green-900 font-semibold'>
-            <Cursor cursorStyle='|'/>
-            </span> */}
+            </span>
           </p>
           <div className='flex flex-col gap-2 items-center'>
             <p className='text-black font-semibold text-md font-sans'>I am an undergraduate student at the National Institute of Technology, Agartala, studying computer science.</p>
