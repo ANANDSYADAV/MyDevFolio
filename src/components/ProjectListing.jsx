@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function ProjectListing() {
 
     return (
-        <div id="projects" className="flex flex-col justify-center items-center h-[1500px] sm:h-[1800px] md:h-[2100px] lg:h-[1800px] px-0 py-10 gap-12 bg-gray-100">
+        <div id="projects" className="flex flex-col justify-center items-center h-[1900px] sm:h-[2500px] md:h-[2700px] lg:h-[2000px] px-0 py-10 gap-12 bg-gray-100">
             <div className="flex flex-col justify-center items-center gap-3 mx-1 text-center">
                 <p className="font-sans text-3xl font-bold">PROJECTS</p>
                 <div className="border-b-4 border-blue-900 w-[50px] rounded-xl" />

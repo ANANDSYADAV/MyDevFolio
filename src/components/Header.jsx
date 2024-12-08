@@ -36,7 +36,7 @@ function Header() {
                   <Link
                     to={'projects'}
                     smooth={true}
-                    offset={0}
+                    offset={-80}
                     duration={500}
                     className='text-[18px] hover:text-blue-700 cursor-pointer'>PROJECTS</Link>
                   <Link

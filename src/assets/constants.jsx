@@ -13,6 +13,16 @@ import { GrMysql } from "react-icons/gr";
 
 export const ProjectInfoArr = [
     {
+        title: 'Doctor Reach',
+        intro: `A doctor appointment booking platform.`,
+        lines: ['A doctor appointment booking platform designed to ease the process.', 'This platform enables patients to search and book for doctors based on their medical issues.', 'Used Next.js for frontend, Strapi as backend and Kinde for all authentication purposes.'],
+        techs: ['Next.js', 'Node.js', 'Strapi', 'kinde', 'Shadcn UI'],
+        image1: '/images/project-4-1.png',
+        image2: '/images/project-4-2.png',
+        code: 'https://github.com/ANANDSYADAV/DoctorReach',
+        live: 'https://doctor-reach.vercel.app/'
+    },
+    {
         title: 'YouTube Clone',
         intro: `It's a perfect YouTube clone that fetches data using Rapid API.`,
         lines: ['A React-based YouTube clone that is entirely responsive.', 'Provides you with a search box to display videos according to the query you entered.', 'Shows a loading skeleton by the time data is being fetched using a Rapid API.'],
