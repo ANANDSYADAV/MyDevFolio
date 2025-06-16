@@ -1,15 +1,14 @@
-import { FaReact } from "react-icons/fa";
-import { TbBrandRedux } from "react-icons/tb";
-import { SiReactrouter } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { FaCss3 } from "react-icons/fa";
+import { FaReact, FaCss3, FaStackOverflow, FaAws, FaNode } from "react-icons/fa";
+import { TbBrandRedux, TbBrandCpp } from "react-icons/tb";
+import { SiReactrouter, SiJavascript, SiCodingninjas, SiLeetcode, SiGeeksforgeeks, SiTailwindcss, SiMongodb, SiPostman, SiJira, SiExpress } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
 import { TfiHtml5 } from "react-icons/tfi";
-import { FaGitAlt } from "react-icons/fa6";
+import { FaGitAlt, FaGitlab } from "react-icons/fa6";
 import { DiVisualstudio } from "react-icons/di";
-import { SiTailwindcss } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+import { GrMysql, GrLinkedinOption } from "react-icons/gr";
+import { IoLogoGithub } from "react-icons/io";
+import { RiNpmjsFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 
 export const ProjectInfoArr = [
     {
@@ -56,11 +55,12 @@ export const ProjectInfoArr = [
 ];
 
 export const SkillsArr = [
+    // {
+    //     name: 'C'
+    // },
     {
-        name: 'C'
-    },
-    {
-        name: 'C++'
+        name: 'C++',
+        icon: <TbBrandCpp />
     },
     {
         name: 'HTML',
@@ -75,7 +75,11 @@ export const SkillsArr = [
         icon: <SiJavascript />
     },
     {
-        name: 'React',
+        name: 'TypeScript',
+        icon: <BiLogoTypescript />
+    },
+    {
+        name: 'Reactjs',
         icon: <FaReact />
     },
     {
@@ -91,6 +95,22 @@ export const SkillsArr = [
         icon: <TbBrandRedux />
     },
     {
+        name: 'Nodejs',
+        icon: <FaNode />
+    },
+    {
+        name: 'Expressjs',
+        icon: <SiExpress />
+    },
+    {
+        name: 'MongoDB',
+        icon: <SiMongodb />
+    },
+    {
+        name: 'SQL',
+        icon: <GrMysql />
+    },
+    {
         name: 'Git',
         icon: <FaGitAlt />
     },
@@ -99,15 +119,75 @@ export const SkillsArr = [
         icon: <VscGithubInverted />
     },
     {
+        name: 'GitLab',
+        icon: <FaGitlab />
+    },
+    {
         name: 'VS Code',
         icon: <DiVisualstudio />
     },
     {
-        name: 'SQL Basics',
-        icon: <GrMysql />
+        name: 'Postman',
+        icon: <SiPostman />
     },
     {
-        name: 'MongoDB Basics',
-        icon: <SiMongodb />
+        name: 'Jira',
+        icon: <SiJira />
+    },
+    {
+        name: 'AWS Serverless',
+        icon: <FaAws />
+    },
+];
+
+export const socialLinks = [
+    {
+        name: "Linkedin",
+        icon: <GrLinkedinOption />,
+        href: "https://www.linkedin.com/in/anand-yadav-08b7b2230/",
+        styleForFooter: "text-white cursor-pointer hover:text-gray-500 text-3xl",
+        styleForHome: "rounded-lg hover:text-white",
+    },
+    {
+        name: "Github",
+        icon: <IoLogoGithub />,
+        href: "https://github.com/ANANDSYADAV",
+        styleForFooter: "text-white cursor-pointer hover:text-gray-500 text-3xl",
+        styleForHome: "rounded-lg hover:text-white",
+    },
+    {
+        name: "Leetcode",
+        icon: <SiLeetcode />,
+        href: "https://leetcode.com/anandsyadav257/",
+        styleForFooter: "text-white cursor-pointer hover:text-gray-500 text-3xl",
+        styleForHome: "p-1 rounded-lg hover:text-white",
+    },
+    {
+        name: "Codingninjas",
+        icon: <SiCodingninjas />,
+        href: "https://www.codingninjas.com/studio/profile/ninja_Anand",
+        styleForFooter: "text-white cursor-pointer text-2xl hover:text-gray-500",
+        styleForHome: "text-3xl rounded-lg hover:text-white",
+    },
+    {
+        name: "GFG",
+        icon: <SiGeeksforgeeks />,
+        href: "https://auth.geeksforgeeks.org/user/anandsya3qfj",
+        styleForFooter: "text-white text-4xl cursor-pointer hover:text-gray-500",
+        styleForHome: "text-3xl rounded-lg hover:text-white",
+    },
+    {
+        name: "npm",
+        icon: <RiNpmjsFill />,
+        href: "https://www.npmjs.com/~anandsyadav",
+        styleForFooter: "text-white text-3xl cursor-pointer hover:text-gray-500",
+        styleForHome: "text-3xl rounded-lg hover:text-white",
+    },
+    {
+        name: "stackoverflow",
+        icon: <FaStackOverflow />,
+        href: "https://stackoverflow.com/users/22985848/anand-yadav",
+        styleForFooter: "text-white text-3xl cursor-pointer hover:text-gray-500",
+        styleForHome: "text-3xl rounded-lg hover:text-white",
     },
 ];

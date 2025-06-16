@@ -1,10 +1,8 @@
-import { IoLogoGithub } from "react-icons/io";
-import { GrLinkedinOption } from "react-icons/gr";
-import { SiLeetcode } from "react-icons/si";
-import { SiCodingninjas } from "react-icons/si";
-import { SiGeeksforgeeks } from "react-icons/si";
+import React from "react";
 import { Link } from 'react-scroll'
 import { Typewriter } from "react-simple-typewriter";
+import { socialLinks } from "../assets/constants";
+import { v4 as uuidv4 } from 'uuid';
 
 function Home() {
 
@@ -21,46 +19,23 @@ function Home() {
                 typeSpeed={120}
                 deleteSpeed={80}
                 cursor
-                cursorStyle='|'
+                cursorStyle=''
               />
             </span>
           </p>
           <div className='flex flex-col gap-2 items-center'>
-            <p className='text-black font-semibold text-md font-sans'>I am an undergraduate student at the National Institute of Technology, Agartala, studying computer science.</p>
-            <p className='text-black font-semibold text-md font-sans'>I have a strong interest in web development and related fields.</p>
+            <p className='text-black font-semibold text-md font-sans'>I am a recent Computer Science graduate from the National Institute of Technology, Agartala, with hands-on experience in web development and related technologies.</p>
           </div>
         </div>
-        <div className="bg-white h-[50px] rounded-xl w-auto flex flex-row justify-center items-center gap-5 px-4">
+        <div className="bg-white h-[50px] rounded-xl w-auto flex flex-row justify-center items-center gap-5 px-4 text-3xl">
 
-          <span className="h-full w-auto flex justify-center items-center">
-            <a rel="noreferrer" href="https://www.linkedin.com/in/anand-yadav-08b7b2230/" target="_blank">
-              <GrLinkedinOption className="text-black bg-white cursor-pointer p-1 text-3xl rounded-lg hover:bg-blue-300" />
+          {socialLinks.map((link) => (
+            <a key={uuidv4()} rel="noreferrer" href={link.href} target="_blank" className={link.styleForHome}>
+              {React.cloneElement(link.icon, {
+                className: "p-1 rounded-lg hover:bg-blue-700",
+              })}
             </a>
-          </span>
-
-          <span className="h-full w-auto flex justify-center items-center">
-            <a rel="noreferrer" href="https://github.com/ANANDSYADAV" target="_blank">
-              <IoLogoGithub className="text-black bg-white cursor-pointer p-1 text-3xl rounded-lg hover:bg-blue-300" />
-            </a>
-          </span>
-
-          <span className="h-full w-auto flex justify-center items-center">
-            <a rel="noreferrer" href="https://leetcode.com/anandsyadav257/" target="_blank">
-              <SiLeetcode className="text-black bg-white cursor-pointer p-1 text-3xl rounded-lg hover:bg-blue-300" />
-            </a>
-          </span>
-
-          <span className="h-full w-auto flex justify-center items-center">
-            <a rel="noreferrer" href="https://www.codingninjas.com/studio/profile/ninja_Anand" target="_blank">
-              <SiCodingninjas className="text-black bg-white cursor-pointer p-1 text-3xl rounded-lg hover:bg-blue-300" />
-            </a>
-          </span>
-
-          <span className="h-full w-auto flex justify-center items-center">
-            <a rel="noreferrer" href="https://auth.geeksforgeeks.org/user/anandsya3qfj" target="_blank">
-              <SiGeeksforgeeks className="text-black bg-white cursor-pointer p-1 text-3xl rounded-lg hover:bg-blue-300" />
-            </a>
-          </span>
+          ))}
 
         </div>
         <Link

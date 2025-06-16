@@ -9,19 +9,22 @@ function Header() {
 
   return (
     <>
-      <div className='fixed top-0 h-[80px] w-full bg-white flex font-serif text-gray-800 font-semibold z-10'>
-        <div className='flex items-center justify-between'>
-          <div className='flex flex-row gap-4 items-center h-full pl-12'>
-            <img
-              className='rounded-full h-[45px] w-[45px]'
-              src="/images/My-pic.png" />
-            <p className='text-[18px]'>ANAND YADAV</p>
-          </div>
-          <div className='lg:block hidden'>
+      <header className='fixed top-0 h-[80px] w-full bg-white flex font-serif text-gray-800 font-semibold z-10'>
+        <section className='flex items-center justify-between'>
+          <article className='flex flex-row gap-4 items-center h-full pl-12'>
+            <figure className="flex gap-3 items-center">
+              <img
+                className='rounded-full h-[45px] w-[45px]'
+                src="/images/logo.jpg" />
+              <figcaption className='text-[18px]'>ANAND YADAV</figcaption>
+            </figure>
+          </article>
+          <article className='lg:block hidden'>
             <div className="flex flex-row items-center">
               <div className='fixed right-0 mr-12'>
                 <div className='flex flex-row gap-14'>
                   <Link
+                    role=""
                     to={'home'}
                     smooth={true}
                     offset={-100}
@@ -48,8 +51,8 @@ function Header() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className='flex items-center'>
+          </article>
+          <article className='flex items-center'>
             {menuShow ?
               (<RxCross2
                 onClick={() => setMenuShow(false)}
@@ -59,9 +62,9 @@ function Header() {
                 onClick={() => setMenuShow(true)}
                 className='lg:hidden fixed right-0 mr-12 text-black cursor-pointer text-3xl' />)
             }
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </header>
 
       {menuShow && <MobileMenuBar menuShow={menuShow} setMenuShow={setMenuShow} />}
 

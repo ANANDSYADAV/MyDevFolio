@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import ProjectMenuBar from './ProjectMenuBar';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 function ProjectDetails() {
   const { pid } = useParams();
@@ -17,7 +18,6 @@ function ProjectDetails() {
 
   return (
     <>
-
       <div className='fixed top-0 h-[80px] w-full bg-white flex font-serif text-gray-800 font-semibold z-10'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row gap-4 items-center h-full pl-12'>
@@ -92,7 +92,7 @@ function ProjectDetails() {
               <div className='w-[90%] sm:w-[60%] text-lg text-left'>
                 {ProjectInfoArr[pid - 1].lines.map((line) => {
                   return (
-                    <p key={`${line}${pid - 1}`} >• {line}</p>
+                    <p key={uuidv4()} >• {line}</p>
                   )
                 })}
               </div>
@@ -111,7 +111,7 @@ function ProjectDetails() {
           <div className="flex flex-row flex-wrap gap-3 text-[18px] font-bold text-gray-900 justify-center items-center">
             {ProjectInfoArr[pid - 1].techs.map((tech) => {
               return (
-                <span key={`${tech}${pid - 1}`} className="bg-indigo-300 py-2 px-5 rounded-md flex items-center gap-1">
+                <span key={uuidv4()} className="bg-indigo-300 py-2 px-5 rounded-md flex items-center gap-1">
                   {tech}
                 </span>
               )

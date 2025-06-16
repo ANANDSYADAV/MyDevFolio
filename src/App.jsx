@@ -6,6 +6,8 @@ import About from './components/About'
 import ProjectListing from './components/ProjectListing'
 import Contact from './components/Contact'
 import ProjectDetails from './components/ProjectDetails'
+import MyMoreDetails from './components/MyMoreDetails'
+import FullProjectList from './components/FullProjectList'
 
 function App() {
 
@@ -25,7 +27,9 @@ function App() {
                   <Footer />
                 </>
               } />
-            <Route strict path='/project/:pid' element={<ProjectDetails />} />
+            <Route strict path='/projects' element={<FullProjectList />} />
+            <Route strict path='/projects/:pid' element={<ProjectDetails />} />
+            <Route strict path='/more_details' element={<MyMoreDetails />} />
           </Routes>
         </div>
       </BrowserRouter>

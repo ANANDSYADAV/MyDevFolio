@@ -1,5 +1,7 @@
 import { ProjectInfoArr } from '../assets/constants'
+import { FaRegListAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 
 function ProjectListing() {
 
@@ -8,11 +10,11 @@ function ProjectListing() {
             <div className="flex flex-col justify-center items-center gap-3 mx-1 text-center">
                 <p className="font-sans text-3xl font-bold">PROJECTS</p>
                 <div className="border-b-4 border-blue-900 w-[50px] rounded-xl" />
-                <p className="font-sans text-xl font-normal ">Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
+                {/* <p className="font-sans text-xl font-normal ">Here you will find some of the personal and clients projects that I created with each project containing its own case study</p> */}
             </div>
             {ProjectInfoArr.map((project, index) => {
                 return (
-                    <div className="flex flex-col lg:flex-row justify-center items-center gap-7" key={project.title}>
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-7" key={uuidv4()}>
                         <img
                             className="h-[150px] w-[380px] sm:h-[300px] sm:w-[600px] md:h-[400px] md:w-[700px]"
                             src={project.image1} alt={project.title} />
@@ -20,11 +22,13 @@ function ProjectListing() {
                             <p className="text-2xl font-bold">{project.title}</p>
                             <p className="text-xl text-teal-800">{project.intro}</p>
                             <Link
-                            to={`/project/${index + 1}`} className="w-[200px] bg-blue-700 py-3 text-white text-xl font-bold font-sans rounded-md hover:opacity-[0.9] mx-auto lg:mx-0 text-center">View Details</Link>
+                                to={`/projects/${index + 1}`} className="w-[200px] bg-blue-700 py-3 text-white text-xl font-bold font-sans rounded-md hover:opacity-[0.9] mx-auto lg:mx-0 text-center">View Details</Link>
                         </div>
                     </div>
                 )
             })}
+
+            <Link to='/projects' role='button' className="bg-gray-700 hover:bg-gray-500 text-white py-2 px-5 rounded-md flex items-center gap-1">View all <FaRegListAlt /></Link>
         </div>
     )
 }
