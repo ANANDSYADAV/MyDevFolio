@@ -191,3 +191,107 @@ export const socialLinks = [
         styleForHome: "text-3xl rounded-lg hover:text-white",
     },
 ];
+
+export const experience = [
+    {
+        company: "EPAM Systems",
+        imgUrl: "https://cf-assets.www.cloudflare.com/slt3lc6tev37/53iyzH5H5sbGiDKBDNhtD4/bbab813b8a8c7115b227ad942f015e07/EPAM_LOGO_Black.png",
+        position: "Junior Software Engineer",
+        duration: "Jan 2025 - May 2025",
+        desc: "I did an internship at EPAM Systems, where I contributed to full-stack web development using modern technologies like HTML, CSS, JavaScript, Node.js, and Express. I gained hands-on experience in building scalable web applications, AWS Serverless, collaborating with teams, and following agile development practices."
+    },
+    {
+        company: "Bureau of Indian Standards",
+        imgUrl: "https://enterslice.com/learning/wp-content/uploads/2019/03/Bureau-of-Indian-Standards.jpg",
+        position: "Summer Intern",
+        duration: "May 2024 - July 2024",
+        desc: "I completed a summer internship focused on standards related to image processing, computer graphics, and data representation. During this time, I explored the JPEG standard and contributed to understanding the technical framework behind image compression and representation."
+    },
+]
+
+{/* <img src="" alt="ANAND-YADAV-" border="0">
+<img src="" alt="ANAND-YADAV-page-0001" border="0">
+<img src="" alt="anand-yadav--page-0001" border="0">
+
+<img src="" alt="-page-0001" border="0">
+<img src="" alt="-page-0001" border="0">
+<img src="" alt="Get-the-most-out-of--Path-page-0001" border="0">
+<img src="" alt="-page-0001" border="0">
+<img src="" alt="-page-0001" border="0">
+<img src="" alt="-page-0001" border="0">
+<img src="" alt="-page-0001" border="0"> */}
+
+export const certificates = [
+    {
+        name: "frontend-developer-react-certificate-hackerrank",
+        link: "https://i.ibb.co/yB8BwS6z/frontend-developer-react-certificate-hackerrank-page-0001.jpg",
+    },
+    {
+        name: "javascript-intermediate-certificate-hackerrank",
+        link: "https://i.ibb.co/QFD2W98G/javascript-intermediate-certificate-hackerrank-page-0001.jpg",
+    },
+    {
+        name: "AWS-Security-Best-Practices-for-Developers",
+        link: "https://i.ibb.co/TDYGvjKp/AWS-Security-Best-Practices-for-Developers-page-0001.jpg",
+    },
+    {
+        name: "Type-Script-for-Java-Script-Developers",
+        link: "https://i.ibb.co/svzfXpMt/Type-Script-for-Java-Script-Developers-page-0001.jpg",
+    },
+    {
+        name: "React-Using-Type-Script",
+        link: "https://i.ibb.co/LDH72BjR/React-Using-Type-Script-page-0001.jpg",
+    },
+    {
+        name: "Med-Tech-Plus",
+        link: "https://i.ibb.co/Z60xWFVH/ANAND-YADAV-Med-Tech-Plus.jpg",
+    },
+    {
+        name: "Epam Campus JS Program",
+        link: "https://i.ibb.co/prNMwxjJ/ANAND-YADAV-page-0001.jpg",
+    },
+    {
+        name: "Certificate-Node-JS",
+        link: "https://i.ibb.co/hFMGRWZb/Certificate-Node-JS-page-0001.jpg",
+    },
+    {
+        name: "Postman-Fundamental-Student-Expert",
+        link: "https://i.ibb.co/2Y6qRw0r/Postman-Fundamental-Student-Expert-page-0001.jpg",
+    },
+    {
+        name: "Learning-Jenkins",
+        link: "https://i.ibb.co/svGqjmkn/Learning-Jenkins-page-0001.jpg",
+    },
+    {
+        name: "jira-certificate",
+        link: "https://i.ibb.co/sdvmsDzd/anand-yadav-jira-certificate-page-0001.jpg",
+    },
+    {
+        name: "Confluence-Learning",
+        link: "https://i.ibb.co/hRJsYxx8/Get-the-most-out-of-Confluence-Learning-Path-page-0001.jpg",
+    },
+]
+
+export const academics = [
+    {
+        heading: "Winter Hindi Debate",
+        desc: "I participated in a Hindi debate competition during my first year of college. Competing against multiple teams, I secured the 4th position, showcasing my public speaking and critical thinking skills.",
+    },
+    {
+        heading: "NCC Journey",
+        desc: "I have been an active NCC cadet during my college years, committed to discipline, leadership, and service. Through various camps and training sessions, I developed physical endurance, teamwork, and a strong sense of responsibility. My NCC journey has played a key role in shaping my character and instilling a spirit of dedication and resilience.",
+        link: "/ncc"
+    },
+    {
+        heading: "Face Detection Attendance System",
+        desc: "In my final year, I developed a face detection-based attendance system using computer vision and machine learning techniques. The system captures facial data in real-time via webcam and marks attendance by recognizing registered faces accurately.",
+    },
+    {
+        heading: "Gym Management Application",
+        desc: "In my final year, I developed a face detection-based attendance system using computer vision and machine learning techniques. The system captures facial data in real-time via webcam and marks attendance by recognizing registered faces accurately.",
+    },
+    {
+        heading: "B.Tech. Course Completion",
+        desc: "Successfully completed my B.Tech in Computer Science with a CGPA of 8.94. My academic journey strengthened my technical foundation and prepared me for real-world problem-solving.",
+    },
+]

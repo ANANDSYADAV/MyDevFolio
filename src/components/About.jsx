@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { SkillsArr } from '../assets/constants'
 import { GiArmoredBoomerang } from "react-icons/gi";
 import { v4 as uuidv4 } from 'uuid';
-
+{/* <img src="https://i.ibb.co/PZRhqNSb/Anand-Img.jpg" alt="Anand-Img" border="0"> */ }
 export default function About() {
   return (
     <section id="about" className=" flex flex-col justify-center items-center sm:px-5 px-10 py-[25%] sm:py-[20%] md:py-[15%] text-center gap-[50px]">
@@ -22,8 +22,10 @@ export default function About() {
         <div>
           <figure>
             <img
-              className='rounded-s-[200px] rounded-e-[200px] h-[300px] w-[300px] md:h-[400px] md:w-[90%] border-red-300 border-2'
-              src="https://images.pexels.com/photos/19740567/pexels-photo-19740567/free-photo-of-my-image.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="My Image" />
+              className='h-[300px] w-[300px] md:h-[400px] md:w-[90%]'
+              // className='rounded-s-[200px] rounded-e-[200px] h-[300px] w-[300px] md:h-[400px] md:w-[90%] border-red-300 border-2'
+              src="https://i.ibb.co/PZRhqNSb/Anand-Img.jpg" alt="My Image" />
+            {/* src="https://images.pexels.com/photos/19740567/pexels-photo-19740567/free-photo-of-my-image.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="My Image" /> */}
           </figure>
         </div>
       </article>

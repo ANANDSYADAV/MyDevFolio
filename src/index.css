@@ -17,3 +17,7 @@ body {
     padding: 0;
     min-height: 100vh;
 }
+
+.navigate-btn {
+    @apply relative z-10 h-[2.6em] px-5 overflow-hidden rounded-md border-2 border-blue-600 text-[17px] leading-[2.5em] font-medium;
+}

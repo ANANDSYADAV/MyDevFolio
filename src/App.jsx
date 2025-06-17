@@ -12,28 +12,26 @@ import FullProjectList from './components/FullProjectList'
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <div className='flex flex-col h-full'>
-          <Routes>
-            <Route path='/'
-              element={
-                <>
-                  <Header />
-                  <Home />
-                  <About />
-                  <ProjectListing />
-                  <Contact />
-                  <Footer />
-                </>
-              } />
-            <Route strict path='/projects' element={<FullProjectList />} />
-            <Route strict path='/projects/:pid' element={<ProjectDetails />} />
-            <Route strict path='/more_details' element={<MyMoreDetails />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <div className='flex flex-col h-full'>
+        <Routes>
+          <Route path='/'
+            element={
+              <>
+                <Header />
+                <Home />
+                <About />
+                <ProjectListing />
+                <Contact />
+                <Footer />
+              </>
+            } />
+          <Route strict path='/projects' element={<FullProjectList />} />
+          <Route strict path='/projects/:pid' element={<ProjectDetails />} />
+          <Route strict path='/more_details' element={<MyMoreDetails />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
