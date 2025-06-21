@@ -9,47 +9,28 @@ import { CardComp } from "./Card/CardComp";
 import { v4 as uuidv4 } from "uuid";
 import { FaRegRectangleList } from "react-icons/fa6";
 import { GiFireGem } from "react-icons/gi";
+import TabButton from "./TabButton";
+import { tabs } from "../assets/constants";
 
 export default function MyMoreDetails() {
-  const [currentTab, setCurrentTab] = useState("career");
+  const [currentTab, setCurrentTab] = useState("Career");
 
   return (
-    <section className="flex flex-col gap-5">
+    <section className="flex flex-col">
       <article className="flex flex-col justify-center items-center sm:flex-row gap-3 p-2 font-bold text-white text-start bg-slate-300">
-        <button
-          className={`navigate-btn flex gap-2 items-center justify-center ${
-            currentTab === "career"
-              ? "bg-[#0077ff] text-white transition ease-in-out"
-              : "text-blue-600"
-          }`}
-          onClick={() => setCurrentTab("career")}
-        >
-          <HiBuildingOffice /> <div>Career</div>
-        </button>
-        <button
-          className={`navigate-btn flex gap-2 items-center justify-center ${
-            currentTab === "certificate"
-              ? "bg-[#0077ff] text-white transition ease-in-out"
-              : "text-blue-600"
-          }`}
-          onClick={() => setCurrentTab("certificate")}
-        >
-          <PiCertificateFill /> Certifications
-        </button>
-        <button
-          className={`navigate-btn flex gap-2 items-center justify-center ${
-            currentTab === "academic"
-              ? "bg-[#0077ff] text-white transition ease-in-out"
-              : "text-blue-600"
-          }`}
-          onClick={() => setCurrentTab("academic")}
-        >
-          <HiAcademicCap /> Academics
-        </button>
+        {tabs.map((tab) => (
+          <TabButton
+            key={uuidv4()}
+            name={tab.name}
+            icon={tab.icon}
+            onclick={setCurrentTab}
+            currTab={currentTab}
+          />
+        ))}
       </article>
       <article>
-        {currentTab === "career" && (
-          <section>
+        {currentTab === "Career" && (
+          <section className="my-4">
             {experience.map((exp) => (
               <article key={uuidv4()} className="w-[80%] mx-auto my-8">
                 <div className="flex gap-2 items-center">
@@ -63,8 +44,8 @@ export default function MyMoreDetails() {
         )}
       </article>
       <article>
-        {currentTab === "certificate" && (
-          <section className="w-[80%] mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
+        {currentTab === "Certifications" && (
+          <section className="w-[80%] mx-auto my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
             {certificates.map((cert) => (
               <article
                 key={uuidv4()}
@@ -83,8 +64,8 @@ export default function MyMoreDetails() {
         )}
       </article>
       <article>
-        {currentTab === "academic" && (
-          <section className="w-[80%] mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-8">
+        {currentTab === "Academics" && (
+          <section className="w-[80%] mx-auto my-4 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-8">
             {academics.map((acad, index) => (
               <article
                 key={uuidv4()}
