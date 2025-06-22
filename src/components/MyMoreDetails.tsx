@@ -12,8 +12,11 @@ import { GiFireGem } from "react-icons/gi";
 import TabButton from "./TabButton";
 import { tabs } from "../assets/constants";
 
+import { useZustandStore } from "../store/zustStore";
+
 export default function MyMoreDetails() {
-  const [currentTab, setCurrentTab] = useState("Career");
+  const currentTab = useZustandStore((state) => state.currTab);
+  const setCurrentTab = useZustandStore((state) => state.setCurrTab);
 
   return (
     <section className="flex flex-col">
@@ -23,7 +26,7 @@ export default function MyMoreDetails() {
             key={uuidv4()}
             name={tab.name}
             icon={tab.icon}
-            onclick={setCurrentTab}
+            onclick={() => setCurrentTab(tab.name)}
             currTab={currentTab}
           />
         ))}
@@ -47,18 +50,16 @@ export default function MyMoreDetails() {
         {currentTab === "Certifications" && (
           <section className="w-[80%] mx-auto my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
             {certificates.map((cert) => (
-              <article
+              <figure
                 key={uuidv4()}
-                className="group relative flex h-[300px] items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-[600px]"
+                className="group relative flex h-[400px] items-end overflow-hidden rounded-lg bg-gray-300 shadow-2xl border-[2px] border-slate-400"
               >
-                <figure className="flex gap-2 items-center">
-                  <img
-                    src={cert.link}
-                    alt={cert.name}
-                    className="absolute inset-0 h-full w-full object-contain object-center transition duration-200 group-hover:scale-110"
-                  />
-                </figure>
-              </article>
+                <img
+                  src={cert.link}
+                  alt={cert.name}
+                  className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110 ease-in-out"
+                />
+              </figure>
             ))}
           </section>
         )}
@@ -69,7 +70,7 @@ export default function MyMoreDetails() {
             {academics.map((acad, index) => (
               <article
                 key={uuidv4()}
-                className={`flex flex-col p-5 gap-2 bg-gray-100 shadow-lg ${
+                className={`flex flex-col p-5 gap-2 bg-gray-100 shadow-lg hover:scale-105 transition-all ease-in-out ${
                   index % 2 === 0
                     ? "border-l-4 border-blue-400"
                     : "border-r-4 border-gray-400"

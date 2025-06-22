@@ -209,19 +209,7 @@ export const experience = [
         duration: "May 2024 - July 2024",
         desc: "I completed a summer internship focused on standards related to image processing, computer graphics, and data representation. During this time, I explored the JPEG standard and contributed to understanding the technical framework behind image compression and representation."
     },
-]
-
-{/* <img src="" alt="ANAND-YADAV-" border="0">
-<img src="" alt="ANAND-YADAV-page-0001" border="0">
-<img src="" alt="anand-yadav--page-0001" border="0">
-
-<img src="" alt="-page-0001" border="0">
-<img src="" alt="-page-0001" border="0">
-<img src="" alt="Get-the-most-out-of--Path-page-0001" border="0">
-<img src="" alt="-page-0001" border="0">
-<img src="" alt="-page-0001" border="0">
-<img src="" alt="-page-0001" border="0">
-<img src="" alt="-page-0001" border="0"> */}
+];
 
 export const certificates = [
     {
