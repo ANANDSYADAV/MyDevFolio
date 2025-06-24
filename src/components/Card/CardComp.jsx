@@ -1,6 +1,4 @@
 export const CardComp = ({ exp }) => {
-    console.log(exp);
-
     return (
         <section className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition overflow-hidden group">
             {/* <figure className="relative">

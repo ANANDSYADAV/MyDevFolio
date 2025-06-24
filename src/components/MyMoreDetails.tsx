@@ -1,9 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
-import { HiBuildingOffice } from "react-icons/hi2";
-import { PiCertificateFill } from "react-icons/pi";
-import { HiAcademicCap } from "react-icons/hi2";
 import { experience, certificates, academics } from "../assets/constants";
 import { CardComp } from "./Card/CardComp";
 import { v4 as uuidv4 } from "uuid";

@@ -4,11 +4,12 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
 import ProjectListing from './components/ProjectListing'
-import Contact from './components/Contact'
+// import Contact from './components/Contact'
 import ProjectDetails from './components/ProjectDetails'
 import MyMoreDetails from './components/MyMoreDetails'
 import FullProjectList from './components/FullProjectList'
 import ControlledAccordions from './components/NCC';
+import ContactForm from './email/EmailService';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
                 <Home />
                 <About />
                 <ProjectListing />
-                <Contact />
+                <ContactForm />
                 <Footer />
               </>
             } />

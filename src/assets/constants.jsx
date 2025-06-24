@@ -57,9 +57,6 @@ export const ProjectInfoArr = [
 ];
 
 export const SkillsArr = [
-    // {
-    //     name: 'C'
-    // },
     {
         name: 'C++',
         icon: <TbBrandCpp />

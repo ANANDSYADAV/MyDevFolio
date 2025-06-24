@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <>
-      <header className='fixed top-0 h-[80px] w-full bg-white flex font-serif text-gray-800 font-semibold z-10'>
+      <header className='fixed top-0 h-[80px] w-full bg-white flex font-serif text-gray-800 font-semibold z-20'>
         <section className='flex items-center justify-between'>
           <article className='flex flex-row gap-4 items-center h-full pl-12'>
             <figure className="flex gap-3 items-center">
