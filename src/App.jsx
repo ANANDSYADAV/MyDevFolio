@@ -4,12 +4,12 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
 import ProjectListing from './components/ProjectListing'
-// import Contact from './components/Contact'
 import ProjectDetails from './components/ProjectDetails'
 import MyMoreDetails from './components/MyMoreDetails'
-import FullProjectList from './components/FullProjectList'
 import ControlledAccordions from './components/NCC';
 import ContactForm from './email/EmailService';
+
+import Chatbot from './chatbot/ChatbotUI';
 
 function App() {
 
@@ -25,10 +25,10 @@ function App() {
                 <About />
                 <ProjectListing />
                 <ContactForm />
+                <Chatbot />
                 <Footer />
               </>
             } />
-          <Route strict path='/projects' element={<FullProjectList />} />
           <Route strict path='/projects/:pid' element={<ProjectDetails />} />
           <Route strict path='/more_details' element={<MyMoreDetails />} />
           <Route strict path='/more_details/ncc' element={<ControlledAccordions />} />

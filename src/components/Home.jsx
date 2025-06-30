@@ -38,14 +38,19 @@ function Home() {
           ))}
 
         </div>
-        <Link
-          to={'projects'}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          <button className="bg-blue-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">PROJECTS</button>
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            to={'projects'}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <button className="bg-blue-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">Projects</button>
+          </Link>
+          <a href="/resume/Anand_Yadav_Resume.pdf" download>
+            <button className="bg-pink-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">Resume</button>
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import { ProjectInfoArr } from '../assets/constants'
-import { FaRegListAlt } from "react-icons/fa";
+// import { FaRegListAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -28,7 +28,7 @@ function ProjectListing() {
                 )
             })}
 
-            <Link to='/projects' role='button' className="bg-gray-700 hover:bg-gray-500 text-white py-2 px-5 rounded-md flex items-center gap-1">View all <FaRegListAlt /></Link>
+            {/* <Link to='/projects' role='button' className="bg-gray-700 hover:bg-gray-500 text-white py-2 px-5 rounded-md flex items-center gap-1">View all <FaRegListAlt /></Link> */}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../index.css";
 import { experience, certificates, academics } from "../assets/constants";
 import { CardComp } from "./Card/CardComp";
@@ -15,7 +15,7 @@ export default function MyMoreDetails() {
   const setCurrentTab = useZustandStore((state) => state.setCurrTab);
 
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mb-5">
       <article className="flex flex-col justify-center items-center sm:flex-row gap-3 p-2 font-bold text-white text-start bg-slate-300">
         {tabs.map((tab) => (
           <TabButton
@@ -89,6 +89,13 @@ export default function MyMoreDetails() {
           </section>
         )}
       </article>
+
+      <NavLink
+        to="/"
+        className="w-[200px] bg-gray-800 py-3 text-blue-200 text-xl font-bold font-sans rounded-md hover:text-indigo-100 mx-auto lg:mx-0 text-center px-5"
+      >
+        ← Back Home
+      </NavLink>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -9,11 +10,12 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { v4 as uuidv4 } from 'uuid';
 import { nccJourney } from '../assets/constants';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 export default function ControlledAccordions() {
     const [expandedAcc, setExpandedAcc] = useState('');
+    const navigate = useNavigate();
 
     const handleChange = (title) => {
         if (expandedAcc === title) setExpandedAcc('');
@@ -60,6 +62,15 @@ export default function ControlledAccordions() {
                     </AccordionDetails>
                 </Accordion>
             ))}
+
+            <div className='flex justify-center'>
+                <button
+                    onClick={() => navigate(-1)}
+                    className="w-[200px] bg-gray-800 py-3 text-blue-200 text-xl font-bold font-sans rounded-md hover:text-indigo-100 mx-auto lg:mx-0 text-center px-5"
+                >
+                    ← Go Back
+                </button>
+            </div>
         </div>
     );
 }
