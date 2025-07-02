@@ -16,7 +16,7 @@ export default function MyMoreDetails() {
 
   return (
     <section className="flex flex-col mb-5">
-      <article className="flex flex-col justify-center items-center sm:flex-row gap-3 p-2 font-bold text-white text-start bg-slate-300">
+      <article className="flex flex-col justify-center items-center sm:flex-row gap-3 p-2 font-bold text-white text-start">
         {tabs.map((tab) => (
           <TabButton
             key={uuidv4()}
@@ -44,15 +44,16 @@ export default function MyMoreDetails() {
       </article>
       <article>
         {currentTab === "Certifications" && (
-          <section className="w-[80%] mx-auto my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
+          <section className="w-[85%] mx-auto my-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
             {certificates.map((cert) => (
               <figure
                 key={uuidv4()}
-                className="group relative flex h-[400px] items-end overflow-hidden rounded-lg bg-gray-300 shadow-2xl border-[2px] border-slate-400"
+                className="group relative flex size-[350px] items-end overflow-hidden rounded-lg bg-gray-300 shadow-2xl border-[2px] border-slate-400"
               >
                 <img
                   src={cert.link}
                   alt={cert.name}
+                  loading="lazy"
                   className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110 ease-in-out"
                 />
               </figure>
@@ -92,7 +93,7 @@ export default function MyMoreDetails() {
 
       <NavLink
         to="/"
-        className="w-[200px] bg-gray-800 py-3 text-blue-200 text-xl font-bold font-sans rounded-md hover:text-indigo-100 mx-auto lg:mx-0 text-center px-5"
+        className="w-[200px] bg-gray-800 py-3 text-blue-200 text-xl font-bold font-sans rounded-md hover:text-indigo-100 mx-auto lg:mx-0 text-center px-5 self-center"
       >
         ← Back Home
       </NavLink>

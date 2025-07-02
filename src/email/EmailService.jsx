@@ -1,11 +1,13 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
+import { ClipLoader } from "react-spinners";
 
 const ContactForm = () => {
     const form = useRef(null);
     const [email, setEmail] = useState(null);
     const [isValid, setIsValid] = useState(true);
+    const [submittingStatus, setSubmittingStatus] = useState(false);
 
     const validateEmail = (value) => {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,21 +20,23 @@ const ContactForm = () => {
         validateEmail(value);
     };
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
+        setSubmittingStatus(true);
 
         if (form.current) {
-            emailjs.sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, import.meta.env.VITE_YOUR_PUBLIC_KEY)
+            await emailjs.sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, import.meta.env.VITE_YOUR_PUBLIC_KEY)
                 .then(() => {
                     toast("Your message has been received!");
                 })
                 .catch((error) => {
-                    toast('Failed to send message');
+                    toast('Error: ', error.message);
                 });
+            setSubmittingStatus(false);
+            form.current?.reset();
+            setEmail(null);
+            setIsValid(true);
         }
-        form.current?.reset();
-        setEmail(null);
-        setIsValid(true);
     };
 
     return (
@@ -48,7 +52,7 @@ const ContactForm = () => {
                 <input
                     type="text"
                     name="user_name"
-                    placeholder="Your Name..."
+                    placeholder="John Doe"
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -59,7 +63,7 @@ const ContactForm = () => {
                         name="user_email"
                         value={email}
                         onChange={handleChange}
-                        placeholder="abcd@gmail.com"
+                        placeholder="example@email.com"
                         required
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
@@ -75,9 +79,9 @@ const ContactForm = () => {
 
                 <button
                     type="submit"
-                    className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
+                    className="w-full py-2 px-4 h-[40px] bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
                 >
-                    Send
+                    {submittingStatus ? <ClipLoader /> : 'Send'}
                 </button>
             </section>
             <ToastContainer />

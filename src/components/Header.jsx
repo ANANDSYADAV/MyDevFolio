@@ -15,7 +15,7 @@ function Header() {
             <figure className="flex gap-3 items-center">
               <img
                 className='rounded-full h-[45px] w-[45px]'
-                src="/images/logo.jpg" />
+                src="/images/logo.jpg" alt="devfolio" />
               <figcaption className='text-[18px]'>ANAND YADAV</figcaption>
             </figure>
           </article>
@@ -24,7 +24,6 @@ function Header() {
               <div className='fixed right-0 mr-12'>
                 <div className='flex flex-row gap-14'>
                   <Link
-                    role=""
                     to={'home'}
                     smooth={true}
                     offset={-100}

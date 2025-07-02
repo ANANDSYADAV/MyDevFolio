@@ -10,7 +10,6 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { v4 as uuidv4 } from 'uuid';
 import { nccJourney } from '../assets/constants';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 export default function ControlledAccordions() {
@@ -29,7 +28,6 @@ export default function ControlledAccordions() {
             {nccJourney.map((step) => (
                 <Accordion key={uuidv4()} expanded={expandedAcc === step.title} className='flex flex-col justify-center border border-gray-200 rounded-md shadow-md mb-3'>
                     <AccordionSummary
-                        // expandIcon=
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
                         onClick={() => handleChange(step.title)}

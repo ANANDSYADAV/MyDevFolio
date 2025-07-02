@@ -103,7 +103,6 @@ function ProjectDetails() {
             <div className="border-b-4 border-blue-900 w-[50px] rounded-xl mb-8" />
             <img src={ProjectInfoArr[pid - 1].image2} alt={ProjectInfoArr[pid - 1].title} className="h-[150px] w-[380px] sm:h-[300px] sm:w-[600px] md:h-[500px] md:w-[800px]" />
           </div>
-          {/* {ProjectInfoArr[pid - 1].image2} */}
         </div>
         <div className='w-[90%] flex flex-col items-center gap-5'>
           <p className='text-3xl font-extrabold text-center mt-5'>Tools Used</p>

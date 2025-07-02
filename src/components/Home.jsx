@@ -30,7 +30,7 @@ function Home() {
         <div className="bg-white h-[50px] rounded-xl w-auto flex flex-row justify-center items-center gap-5 px-4 text-3xl">
 
           {socialLinks.map((link) => (
-            <a key={uuidv4()} rel="noreferrer" href={link.href} target="_blank" className={link.styleForHome}>
+            <a key={uuidv4()} rel="noreferrer" href={link.href} target="_blank" className={link.styleForHome} aria-label="Visit link">
               {React.cloneElement(link.icon, {
                 className: "p-1 rounded-lg hover:bg-blue-700",
               })}
@@ -44,11 +44,12 @@ function Home() {
             smooth={true}
             offset={0}
             duration={500}
+            className="bg-blue-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9] cursor-pointer"
           >
-            <button className="bg-blue-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">Projects</button>
+            Projects
           </Link>
-          <a href="/resume/Anand_Yadav_Resume.pdf" download>
-            <button className="bg-pink-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">Resume</button>
+          <a href="/resume/Anand_Yadav_Resume.pdf" download className="bg-pink-700 py-3 px-10 text-white text-xl font-bold font-sans rounded-sm hover:opacity-[0.9]">
+            Resume
           </a>
         </div>
       </div>

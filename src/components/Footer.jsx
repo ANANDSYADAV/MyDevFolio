@@ -14,7 +14,7 @@ function Footer() {
           <h1>SOCIALS</h1>
           <div className="flex flex-row items-center gap-4 text-4xl">
             {socialLinks.map((link) => (
-              <a rel="noreferrer" href={link.href} target="_blank" key={uuidv4()} className={link.styleForFooter}>{link.icon}</a>
+              <a rel="noreferrer" href={link.href} target="_blank" key={uuidv4()} className={link.styleForFooter} aria-label="Visit link">{link.icon}</a>
             ))}
           </div>
         </article>
