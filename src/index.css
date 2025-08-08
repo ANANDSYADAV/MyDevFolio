@@ -29,3 +29,8 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+/* Markdown Revert */
+.markdown>* {
+    all: revert;
+}

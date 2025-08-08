@@ -26,7 +26,7 @@ export default function ControlledAccordions() {
             <div className='text-center text-3xl gotu-regular text-amber-700 border-b-2 border-cyan-500 mb-5 pb-2 w-[220px] mx-auto'>My NCC Jouney</div>
 
             {nccJourney.map((step) => (
-                <Accordion key={uuidv4()} expanded={expandedAcc === step.title} className='flex flex-col justify-center border border-gray-200 rounded-md shadow-md mb-3'>
+                <Accordion key={step.title} expanded={expandedAcc === step.title} className='flex flex-col justify-center border border-gray-200 rounded-md shadow-md mb-3'>
                     <AccordionSummary
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
@@ -43,10 +43,15 @@ export default function ControlledAccordions() {
                             {expandedAcc === step.title ? <ExpandLessIcon className='absolute right-1 sm:right-3 top-[25%]' /> : <ExpandMoreIcon className='absolute right-1 sm:right-3 top-[25%]' />}
                         </div>
                     </AccordionSummary>
-                    <AccordionDetails className='w-[90%] mx-auto overflow-hidden px-2'>
-                        <div key={expandedAcc === step.title} className='transition-all duration-500 ease-in-out opacity-100 translate-y-0 flex flex-col gap-4'>
-                            {step.img && <figure>
-                                <img src={step.img} alt={step.title} />
+                    <AccordionDetails
+                        className='w-[90%] mx-auto overflow-hidden px-2'
+                        sx={{
+                            transition: 'height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms !important',
+                        }}
+                    >
+                        <div className='flex flex-col gap-4'>
+                            {step.img && <figure className="w-full max-h-[500px] flex justify-center">
+                                <img src={step.img} alt={step.title} className="max-w-full max-h-full object-contain" />
                             </figure>}
                             <Typography>
                                 {step.Desc}
@@ -59,7 +64,8 @@ export default function ControlledAccordions() {
                         </div>
                     </AccordionDetails>
                 </Accordion>
-            ))}
+            ))
+            }
 
             <div className='flex justify-center'>
                 <button
@@ -69,6 +75,6 @@ export default function ControlledAccordions() {
                     ← Go Back
                 </button>
             </div>
-        </div>
+        </div >
     );
 }

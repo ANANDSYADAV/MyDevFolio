@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import "../index.css";
 import { experience, certificates, academics } from "../assets/constants";
 import { CardComp } from "./Card/CardComp";
-import { v4 as uuidv4 } from "uuid";
 import { FaRegRectangleList } from "react-icons/fa6";
 import { GiFireGem } from "react-icons/gi";
 import TabButton from "./TabButton";
@@ -19,7 +18,7 @@ export default function MyMoreDetails() {
       <article className="flex flex-col justify-center items-center sm:flex-row gap-3 p-2 font-bold text-white text-start">
         {tabs.map((tab) => (
           <TabButton
-            key={uuidv4()}
+            key={tab.name}
             name={tab.name}
             icon={tab.icon}
             onclick={() => setCurrentTab(tab.name)}
@@ -31,7 +30,7 @@ export default function MyMoreDetails() {
         {currentTab === "Career" && (
           <section className="my-4">
             {experience.map((exp) => (
-              <article key={uuidv4()} className="w-[80%] mx-auto my-8">
+              <article key={exp.duration} className="w-[80%] mx-auto my-8">
                 <div className="flex gap-2 items-center">
                   <FaRegRectangleList />
                   <div className="text-xl">{exp.duration}</div>
@@ -47,9 +46,20 @@ export default function MyMoreDetails() {
           <section className="w-[85%] mx-auto my-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
             {certificates.map((cert) => (
               <figure
-                key={uuidv4()}
-                className="group relative flex size-[350px] items-end overflow-hidden rounded-lg bg-gray-300 shadow-2xl border-[2px] border-slate-400"
+                key={cert.name}
+                className="group relative flex size-[350px] items-center justify-center overflow-hidden rounded-lg bg-gray-300 shadow-2xl border-[2px] border-slate-400"
               >
+                {/* Placeholder content while loading */}
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500 animate-pulse">
+                  <svg
+                    className="size-12 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zM4 6v12h16V6H4zm2 2h12v8H6V8zm1 1v6h10V9H7zm2 1h8v4H9v-4z"></path>
+                  </svg>
+                </div>
+
                 <img
                   src={cert.link}
                   alt={cert.name}
@@ -66,7 +76,7 @@ export default function MyMoreDetails() {
           <section className="w-[80%] mx-auto my-4 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-8">
             {academics.map((acad, index) => (
               <article
-                key={uuidv4()}
+                key={acad.heading}
                 className={`flex flex-col p-5 gap-2 bg-gray-100 shadow-lg hover:scale-105 transition-all ease-in-out ${
                   index % 2 === 0
                     ? "border-l-4 border-blue-400"

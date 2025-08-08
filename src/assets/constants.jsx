@@ -210,27 +210,31 @@ export const experience = [
 
 export const certificates = [
     {
-        name: "frontend-developer-react-certificate-hackerrank",
+        name: "Introduction to Large Language Models",
+        link: "https://i.ibb.co/JRw2R2VW/llms-certificate.jpg",
+    },
+    {
+        name: "Frontend Developer (React) - HackerRank",
         link: "https://i.ibb.co/yB8BwS6z/frontend-developer-react-certificate-hackerrank-page-0001.jpg",
     },
     {
-        name: "javascript-intermediate-certificate-hackerrank",
+        name: "JavaScript Intermediate Certificate - HackerRank",
         link: "https://i.ibb.co/QFD2W98G/javascript-intermediate-certificate-hackerrank-page-0001.jpg",
     },
     {
-        name: "AWS-Security-Best-Practices-for-Developers",
+        name: "AWS Security - Best Practices for Developers",
         link: "https://i.ibb.co/TDYGvjKp/AWS-Security-Best-Practices-for-Developers-page-0001.jpg",
     },
     {
-        name: "Type-Script-for-Java-Script-Developers",
+        name: "TypeScript for JavaScript Developers",
         link: "https://i.ibb.co/svzfXpMt/Type-Script-for-Java-Script-Developers-page-0001.jpg",
     },
     {
-        name: "React-Using-Type-Script",
+        name: "React Using TypeScript",
         link: "https://i.ibb.co/LDH72BjR/React-Using-Type-Script-page-0001.jpg",
     },
     {
-        name: "Med-Tech-Plus",
+        name: "Medecro HealthHack 2024",
         link: "https://i.ibb.co/Z60xWFVH/ANAND-YADAV-Med-Tech-Plus.jpg",
     },
     {
@@ -238,23 +242,23 @@ export const certificates = [
         link: "https://i.ibb.co/prNMwxjJ/ANAND-YADAV-page-0001.jpg",
     },
     {
-        name: "Certificate-Node-JS",
+        name: "Certificate Node.js",
         link: "https://i.ibb.co/hFMGRWZb/Certificate-Node-JS-page-0001.jpg",
     },
     {
-        name: "Postman-Fundamental-Student-Expert",
+        name: "Postman Fundamental Student Expert",
         link: "https://i.ibb.co/2Y6qRw0r/Postman-Fundamental-Student-Expert-page-0001.jpg",
     },
     {
-        name: "Learning-Jenkins",
+        name: "Learning Jenkins",
         link: "https://i.ibb.co/svGqjmkn/Learning-Jenkins-page-0001.jpg",
     },
     {
-        name: "jira-certificate",
+        name: "Jira Certificate",
         link: "https://i.ibb.co/sdvmsDzd/anand-yadav-jira-certificate-page-0001.jpg",
     },
     {
-        name: "Confluence-Learning",
+        name: "Confluence Learning",
         link: "https://i.ibb.co/hRJsYxx8/Get-the-most-out-of-Confluence-Learning-Path-page-0001.jpg",
     },
 ]

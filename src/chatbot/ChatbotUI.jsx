@@ -65,7 +65,7 @@ const Chatbot = () => {
                         <div ref={bottomRef} className="h-[65%] overflow-y-auto p-2 text-xl flex flex-col gap-2">
                             <p className="text-lg text-gray-600 mb-1">Ask about my journey so far!</p>
                             {chatMsg.length > 0 && chatMsg.map((msg, index) => (
-                                <div key={uuidv4()} style={{ whiteSpace: 'pre-line' }} className={`p-1 flex gap-1 items-end text-lg font-serif ${index % 2 === 0 ? 'bg-slate-400 w-[80%] text-white font-sans font-medium px-2 rounded-md ml-auto' : 'flex-shrink break-words'} `}>
+                                <div key={uuidv4()} style={{ whiteSpace: 'pre-line' }} className={`p-1 flex gap-1 items-end text-lg font-serif markdown ${index % 2 === 0 ? 'bg-slate-400 w-[80%] text-white font-sans font-medium px-2 rounded-md ml-auto' : 'flex-shrink break-words'} `}>
                                     {Array.isArray(msg) && msg.length ? msg.join('\n') : (msg || '')}
                                 </div>
                             ))}
