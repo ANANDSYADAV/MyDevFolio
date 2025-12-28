@@ -6,11 +6,13 @@ import { TfiHtml5 } from "react-icons/tfi";
 import { FaGitAlt, FaGitlab } from "react-icons/fa6";
 import { DiVisualstudio } from "react-icons/di";
 import { GrMysql, GrLinkedinOption } from "react-icons/gr";
-import { IoLogoGithub } from "react-icons/io";
+import { IoLogoGithub, IoLogoAngular } from "react-icons/io";
 import { RiNpmjsFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { HiAcademicCap, HiBuildingOffice } from "react-icons/hi2";
 import { PiCertificateFill } from "react-icons/pi";
+
+import { v4 as uuidv4 } from 'uuid';
 
 export const ProjectInfoArr = [
     {
@@ -58,82 +60,107 @@ export const ProjectInfoArr = [
 
 export const SkillsArr = [
     {
+        id: uuidv4(),
         name: 'C++',
         icon: <TbBrandCpp />
     },
     {
-        name: 'HTML',
+        id: uuidv4(),
+        name: 'HTML5',
         icon: <TfiHtml5 />
     },
     {
-        name: 'CSS',
+        id: uuidv4(),
+        name: 'CSS3',
         icon: <FaCss3 />
     },
     {
+        id: uuidv4(),
         name: 'JavaScript',
         icon: <SiJavascript />
     },
     {
+        id: uuidv4(),
         name: 'TypeScript',
         icon: <BiLogoTypescript />
     },
     {
-        name: 'Reactjs',
+        id: uuidv4(),
+        name: 'React.js',
         icon: <FaReact />
     },
     {
+        id: uuidv4(),
+        name: 'Angular',
+        icon: <IoLogoAngular />
+    },
+    {
+        id: uuidv4(),
         name: 'Tailwind CSS',
         icon: <SiTailwindcss />
     },
     {
+        id: uuidv4(),
         name: 'React Router',
         icon: <SiReactrouter />
     },
     {
+        id: uuidv4(),
         name: 'Redux Toolkit',
         icon: <TbBrandRedux />
     },
     {
-        name: 'Nodejs',
+        id: uuidv4(),
+        name: 'Node.js',
         icon: <FaNode />
     },
     {
-        name: 'Expressjs',
+        id: uuidv4(),
+        name: 'Express.js',
         icon: <SiExpress />
     },
     {
+        id: uuidv4(),
         name: 'MongoDB',
         icon: <SiMongodb />
     },
     {
+        id: uuidv4(),
         name: 'SQL',
         icon: <GrMysql />
     },
     {
+        id: uuidv4(),
         name: 'Git',
         icon: <FaGitAlt />
     },
     {
+        id: uuidv4(),
         name: 'GitHub',
         icon: <VscGithubInverted />
     },
     {
+        id: uuidv4(),
         name: 'GitLab',
         icon: <FaGitlab />
     },
     {
+        id: uuidv4(),
         name: 'VS Code',
         icon: <DiVisualstudio />
     },
     {
+        id: uuidv4(),
         name: 'Postman',
         icon: <SiPostman />
     },
     {
+        id: uuidv4(),
         name: 'Jira',
         icon: <SiJira />
     },
     {
+        id: uuidv4(),
         name: 'AWS Serverless',
         icon: <FaAws />
     },
